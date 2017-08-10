@@ -4,6 +4,12 @@ $primary: #E56B70;
 $secondary1: #5CA4A9;
 $secondary2: #FFCA3A;
 
+.sections {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .section-headers {
   font-family: Questrial;
   margin: 0;
@@ -12,4 +18,31 @@ $secondary2: #FFCA3A;
   color: black;
   font-size: 48px;
   border-bottom: 2px solid black;
+}
+
+.icon-secs {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.icon {
+  -webkit-filter: drop-shadow(3px 3px 3px #222);
+  filter: drop-shadow(3px 3px 3px #222);
+}
+
+.icon-subs {
+  h4 {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 4px;
+  }
+}
+
+.paragraphs {
+  width: 200px;
+  p{
+    font-size: 14px;
+    font-family: Raleway;
+  }
 }
