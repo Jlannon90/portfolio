@@ -4,9 +4,28 @@
   height: 25px;
 }
 
+.menu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: Raleway;
+    font-size: 22px;
+    margin-left: 5px;
+    font-weight: bold;
+    &:hover {
+      color: white;
+      text-shadow: 3px 3px 8px black;
+    }
+  }
+}
+
 .landing-page {
   background-color: #E56B70;
-  height: 900px;
+  height: 650px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -19,6 +38,7 @@
       margin: 0;
       color: white;
       font-size: 48px;
+      height: 40px;
     }
     .firstname {
       text-align: right;
@@ -31,9 +51,14 @@
     }
   }
   .subtitle {
+    align-self: flex-end;
+    margin-right: 10px;
+    margin-top: 10px;
     h4 {
       font-family: Raleway;
       margin: 0;
+      margin-top: 3px;
+      font-size: 22px;
     }
   }
 }

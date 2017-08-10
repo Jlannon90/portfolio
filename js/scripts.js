@@ -13,6 +13,6 @@ exports.exampleModule = ExampleModule;
 $(function () {
 	$('.hamburger-menu').on('click', function() {
 		$('.bar').toggleClass('animate');
-    console.log("hi");
+    $('.menu').fadeToggle(800);
 	})
 })();
