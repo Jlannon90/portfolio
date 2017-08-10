@@ -1,3 +1,4 @@
+//Navigation
 .navbar {
   position: fixed;
   width: 100%;
@@ -23,8 +24,9 @@
   }
 }
 
+// Landing Page
 .landing-page {
-  background-color: #E56B70;
+  background-color: $primary;
   height: 650px;
   width: 100%;
   display: flex;
@@ -60,5 +62,30 @@
       margin-top: 3px;
       font-size: 22px;
     }
+  }
+}
+
+//Process
+.process {
+  position: relative;
+  .pro-title {
+    text-align: center;
+    width: 220px;
+    h1 {
+      @extend .section-headers;
+      height: 50px;
+      span {
+        color: white;
+      }
+    }
+  }
+  .color-block {
+    background-color: $secondary1;
+    height: 55px;
+    width: 102px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 100px;
   }
 }
