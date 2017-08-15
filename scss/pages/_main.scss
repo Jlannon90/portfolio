@@ -211,3 +211,66 @@
     }
   }
 }
+
+//Contact
+
+#contact {
+  @extend .sections;
+  .con-title {
+    text-align: center;
+    width: 220px;
+    h1 {
+      @extend .section-headers;
+      height: 50px;
+      span {
+        color: white;
+      }
+    }
+  }
+  .color-block {
+    background-color: $primary;
+    height: 55px;
+    width: 102px;
+    z-index: -1;
+    position: absolute;
+    top: 20px;
+    left: 55px;
+  }
+  .lets-work {
+    position: absolute;
+    top: 35px;
+    left: 160px;
+    h5 {
+      text-align: right;
+      font-family: Raleway;
+      font-style: italic;
+      font-size: 22px;
+    }
+  }
+  form {
+    align-self: center;
+    margin-top: 200px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .row-1, .row-2, .row-3, .row-4 {
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+    }
+    input {
+      border: 1px solid black;
+    }
+    textarea {
+      border: 1px solid black;
+    }
+    label {
+      text-align: right;
+      font-family: Raleway;
+      font-style: italic;
+      font-size: 22px;
+    }
+  }
+}
