@@ -9,7 +9,6 @@ ExampleModule.prototype.examplePrototype = function() {
 
 exports.exampleModule = ExampleModule;
 
-
 $(function () {
 	$('.hamburger-menu').on('click', function() {
 		$('.bar').toggleClass('animate');

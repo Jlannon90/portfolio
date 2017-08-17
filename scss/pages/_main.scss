@@ -90,6 +90,7 @@
     position: absolute;
     top: 20px;
     left: 100px;
+    animation: movefwd 15s infinite;
   }
   .process-first-row {
     margin-top: 30px;
@@ -147,6 +148,7 @@
 
 //Work
 #work {
+  height: 640px;
   background-color: $secondary2;
   @extend .sections;
   justify-content: space-between;
@@ -189,11 +191,26 @@
   .proj-img {
     align-self: flex-end;
     margin-top: 60px;
+    position: relative;
     img {
       width: 370px;
       height: auto;
       box-shadow: 4px 4px 10px black;
+
     }
+    // &:hover:after {
+    //   content: "To Project Github";
+    //   background-color: rgba(255, 255, 255, 0.4);
+    //   height: 98%;
+    //   width: 100%;
+    //   position: absolute;
+    //   top: 0;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   font-family: Raleway;
+    //   font-size: 22px;
+    // }
   }
 
   .proj-desc {
@@ -208,6 +225,9 @@
     justify-content: space-between;
     .left-arrow, .right-arrow {
       margin: 10px 20px;
+      &:hover {
+        animation: squish 1s forwards;
+      }
     }
   }
 }
@@ -216,6 +236,7 @@
 
 #contact {
   @extend .sections;
+  height: 640px;
   .con-title {
     text-align: center;
     width: 220px;
@@ -235,6 +256,7 @@
     position: absolute;
     top: 20px;
     left: 55px;
+    animation: movebwd 15s infinite;
   }
   .lets-work {
     position: absolute;
@@ -249,28 +271,66 @@
   }
   form {
     align-self: center;
-    margin-top: 200px;
+    margin-top: 180px;
     width: 250px;
-    height: 250px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    .row-1, .row-2, .row-3, .row-4 {
-      width: 250px;
+    .row-1, .row-2, .row-3{
+      width: 290px;
       display: flex;
-      justify-content: space-between;
     }
     input {
       border: 1px solid black;
+      width: 110px;
+    }
+    input::placeholder {
+      font-family: Raleway;
+      color: black;
     }
     textarea {
       border: 1px solid black;
+      width: 100%;
+    }
+    textarea::placeholder {
+      font-family: Raleway;
+      color: black;
     }
     label {
-      text-align: right;
+      text-align: left;
       font-family: Raleway;
       font-style: italic;
       font-size: 22px;
+      width: 125px;
+    }
+    .row-3 {
+      justify-content: flex-end;
+      button {
+        width: 80px;
+        height: 40px;
+        font-family: Raleway;
+        font-size: 22px;
+        margin-right: 35px;
+        padding: 10px;
+        background-color: $primary;
+        color: white;
+        border: none;
+      }
+    }
+  }
+  .social-links {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    .soc-box {
+      a {
+        margin: 5px;
+        &:hover {
+          animation: bounce 1s forwards;
+        }
+      }
     }
   }
 }
