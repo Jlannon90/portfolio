@@ -22,7 +22,7 @@ $secondary2: #FFCA3A;
   span {
     text-shadow: 1px 1px 1px black;
   }
-  
+
 }
 
 .icon-secs {
@@ -34,6 +34,9 @@ $secondary2: #FFCA3A;
   img {
     width: 94px;
     height: auto;
+    @media #{$breakpoint-tablet} {
+      width: auto;
+    }
   }
   -webkit-filter: drop-shadow(3px 3px 3px #222);
   filter: drop-shadow(3px 3px 3px #222);
@@ -50,6 +53,9 @@ $secondary2: #FFCA3A;
 
 .paragraphs {
   width: 200px;
+  @media #{$breakpoint-tablet} {
+    height: 230px;
+  }
   p{
     font-size: 14px;
     font-family: Raleway;

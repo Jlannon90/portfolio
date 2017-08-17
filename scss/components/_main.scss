@@ -6,7 +6,7 @@ $bar-spacing: 10px;
 .hamburger-menu {
 	position: absolute;
   top: 20px;
-  left: 20px;
+  right: 20px;
   width: $bar-width;
 	height: $bar-height + $bar-spacing*2;
 	cursor: pointer;

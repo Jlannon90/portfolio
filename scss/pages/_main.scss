@@ -9,11 +9,15 @@
 .menu {
   display: none;
   position: absolute;
-  top: 10px;
-  left: 60px;
+  top: 8px;
+  left: 20px;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;
   border-radius: 5px;
+  @media #{$breakpoint-tablet} {
+    height: 120px;
+    width: 110px;
+  }
   a {
     text-decoration: none;
     color: black;
@@ -28,48 +32,68 @@
 
 // Landing Page
 #landing-page {
-  background-color: $primary;
-  height: 650px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .title {
-    h1 {
-      font-family: Questrial;
-      width: 200px;
-      margin: 0;
-      color: white;
-      font-size: 48px;
-      height: 40px;
-      text-shadow: 1px 1px 1px black;
+  height: 100vh;
+  .landing-color {
+    background-color: $primary;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media #{$breakpoint-tablet} {
+      width: 65%;
+      position: relative;
+      align-items: flex-end;
     }
-    .firstname {
-      text-align: right;
+    .title {
+      h1 {
+        font-family: Questrial;
+        width: 200px;
+        margin: 0;
+        color: white;
+        font-size: 48px;
+        height: 40px;
+        text-shadow: 1px 1px 1px black;
+        @media #{$breakpoint-tablet} {
+          position: relative;
+          left: 91px;
+        }
+      }
+      .firstname {
+        text-align: right;
+      }
+      .lastname {
+        text-align: left;
+      }
+      span {
+        @media #{$breakpoint-tablet} {
+          color: black;
+          text-shadow: none;
+        }
+      }
     }
-    .lastname {
-      text-align: left;
-    }
-    span {
-
-    }
-  }
-  .subtitle {
-    align-self: flex-end;
-    margin-right: 10px;
-    margin-top: 10px;
-    h4 {
-      font-family: Raleway;
-      margin: 0;
-      margin-top: 3px;
-      font-size: 22px;
+    .subtitle {
+      align-self: flex-end;
+      margin-right: 10px;
+      margin-top: 10px;
+      h4 {
+        font-family: Raleway;
+        margin: 0;
+        margin-top: 3px;
+        font-size: 22px;
+        @media #{$breakpoint-tablet} {
+          position: relative;
+          left: 250px;
+        }
+      }
     }
   }
 }
 
 //Process
 #process {
+  height: 100vh;
   @extend .sections;
   .pro-title {
     text-align: center;
@@ -92,55 +116,74 @@
     left: 100px;
     animation: movefwd 15s infinite;
   }
-  .process-first-row {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-around;
-    .text-1 {
-      @extend .paragraphs;
+  .process-secs {
+    @media #{$breakpoint-tablet} {
+      display: flex;
+      justify-content: space-around;
     }
-    .icon-1 {
-      @extend .icon-secs;
-      .icon {
-        @extend .icon;
+    .process-first-row {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-around;
+      @media #{$breakpoint-tablet} {
+        flex-direction: column-reverse;
+        margin-top: 5px;
       }
-      .icon-1-sub {
-        @extend .icon-subs;
+      .text-1 {
+        @extend .paragraphs;
       }
-    }
-  }
-  .process-second-row {
-    margin-top: 5px;
-    display: flex;
-    justify-content: space-around;
-    .icon-2 {
-      @extend .icon-secs;
-      .icon {
-        @extend .icon;
-      }
-      .icon-2-sub {
-        @extend .icon-subs;
+      .icon-1 {
+        @extend .icon-secs;
+        .icon {
+          @extend .icon;
+        }
+        .icon-1-sub {
+          @extend .icon-subs;
+        }
       }
     }
-    .text-2 {
-      @extend .paragraphs;
-      text-align: right;
-    }
-  }
-  .process-third-row {
-    margin-top: 5px;
-    display: flex;
-    justify-content: space-around;
-    .text-3 {
-      @extend .paragraphs;
-    }
-    .icon-3 {
-      @extend .icon-secs;
-      .icon {
-        @extend .icon;
+    .process-second-row {
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-around;
+      @media #{$breakpoint-tablet} {
+        flex-direction: column;
       }
-      .icon-3-sub {
-        @extend .icon-subs;
+      .icon-2 {
+        @extend .icon-secs;
+        .icon {
+          @extend .icon;
+        }
+        .icon-2-sub {
+          @extend .icon-subs;
+        }
+      }
+      .text-2 {
+        @extend .paragraphs;
+        text-align: right;
+        @media #{$breakpoint-tablet} {
+          text-align: left;
+        }
+      }
+    }
+    .process-third-row {
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-around;
+      @media #{$breakpoint-tablet} {
+        flex-direction: column-reverse;
+      }
+      .text-3 {
+        @extend .paragraphs;
+      }
+      .icon-3 {
+        @extend .icon-secs;
+        .icon {
+          @extend .icon;
+        }
+        .icon-3-sub {
+          @extend .icon-subs;
+        }
       }
     }
   }
@@ -148,95 +191,172 @@
 
 //Work
 #work {
-  height: 640px;
-  background-color: $secondary2;
-  @extend .sections;
-  justify-content: space-between;
-  .work-title {
-    margin-right: 20px;
-    margin-top: 40px;
-    text-align: center;
-    width: 160px;
-    align-self: flex-end;
-    h1 {
-      @extend .section-headers;
-      height: 50px;
-    }
-  }
-  .title-pos {
-    position: absolute;
-    top: 80px;
-    left: -40px;
-    .proj-title {
-      transform: rotateZ(-90deg) translateY(-20px);
-
-      h5 {
-        text-align: right;
-        font-family: Raleway;
-        font-style: italic;
-        font-size: 22px;
-        line-height: 10px;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        margin-right: 20px;
-      }
-      .line {
-        width: 200px;
-        height: 2px;
-        background-color: black;
-      }
-    }
-  }
-
-  .proj-img {
-    align-self: flex-end;
-    margin-top: 60px;
-    position: relative;
-    img {
-      width: 370px;
-      height: auto;
-      box-shadow: 4px 4px 10px black;
-
-    }
-    // &:hover:after {
-    //   content: "To Project Github";
-    //   background-color: rgba(255, 255, 255, 0.4);
-    //   height: 98%;
-    //   width: 100%;
-    //   position: absolute;
-    //   top: 0;
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   font-family: Raleway;
-    //   font-size: 22px;
-    // }
-  }
-
-  .proj-desc {
-    @extend .paragraphs;
-    width: 305px;
-    align-self: center;
-    margin-top: 20px;
-  }
-
-  .arrow-bar {
-    display: flex;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  .work-color {
+    height: 600px;
+    background-color: $secondary2;
+    @extend .sections;
     justify-content: space-between;
-    .left-arrow, .right-arrow {
-      margin: 10px 20px;
-      &:hover {
-        animation: squish 1s forwards;
+    @media #{$breakpoint-tablet} {
+      width: 550px;
+    }
+    .work-title {
+      margin-right: 20px;
+      margin-top: 40px;
+      text-align: center;
+      width: 160px;
+      align-self: flex-end;
+      h1 {
+        @extend .section-headers;
+        height: 50px;
+        @media #{$breakpoint-tablet} {
+          position: relative;
+          left: 200px;
+          bottom: 100px;
+        }
+      }
+    }
+    .color-block {
+      background-color: $secondary2;
+      height: 55px;
+      width: 92px;
+      z-index: -1;
+      position: relative;
+      left: 610px;
+      bottom: 195px;
+      animation: movefwd 15s infinite;
+    }
+    .title-pos {
+      position: absolute;
+      top: 80px;
+      left: -40px;
+      transform: rotateZ(-90deg) translateY(-20px);
+      @media #{$breakpoint-tablet} {
+        transform: rotateZ(0deg) translateY(0px);
+        left: 240px;
+        top: 100px;
+      }
+      .proj-title {
+        animation: flip 3s forwards .2s;
+
+        h5 {
+          text-align: right;
+          font-family: Raleway;
+          font-style: italic;
+          font-size: 22px;
+          line-height: 10px;
+          margin-bottom: 10px;
+          margin-top: 10px;
+          margin-right: 20px;
+          @media #{$breakpoint-tablet} {
+            line-height: 15px;
+            text-align: left;
+          }
+        }
+        .line {
+          width: 200px;
+          height: 2px;
+          background-color: black;
+          @media #{$breakpoint-tablet} {
+            position: absolute;
+            right: 0;
+            top: 20px;
+
+          }
+        }
+      }
+      .proj-title-2 {
+        @extend .proj-title;
+        display: none;
+
+      }
+    }
+
+    .proj-img {
+      align-self: flex-end;
+      margin-top: 60px;
+      position: relative;
+      @media #{$breakpoint-tablet} {
+        left: 150px;
+        margin-top: 0;
+        bottom: 40px;
+      }
+      img {
+        width: 370px;
+        height: auto;
+        box-shadow: 4px 4px 10px black;
+        animation: imgslide 1.5s forwards;
+        @media #{$breakpoint-tablet} {
+          width: 470px;
+        }
+      }
+      a {
+        height: 370px;
+        width: auto;
+        vertical-align: middle;
+      }
+      // &:hover:after {
+      //   content: "To Project Github";
+      //   background-color: rgba(255, 255, 255, 0.4);
+      //   height: 98%;
+      //   width: 100%;
+      //   position: absolute;
+      //   top: 0;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   font-family: Raleway;
+      //   font-size: 22px;
+      // }
+    }
+    .proj-img-2 {
+      @extend .proj-img;
+      display: none;
+    }
+
+    .proj-desc {
+      @extend .paragraphs;
+      width: 305px;
+      align-self: center;
+      margin-top: 20px;
+      animation: fadeIn 4s forwards;
+      @media #{$breakpoint-tablet} {
+        position: absolute;
+        width: 160px;
+        left: 20px;
+        top: 150px;
+      }
+    }
+    .proj-desc-2 {
+      @extend .proj-desc;
+      display: none;
+    }
+
+    .arrow-bar {
+      display: flex;
+      justify-content: space-between;
+      .left-arrow, .right-arrow {
+        margin: 10px 20px;
+        &:hover {
+          animation: squish 1s forwards;
+        }
+      }
+      .left-arrow-2, .right-arrow-2 {
+        @extend .left-arrow;
+        display: none;
       }
     }
   }
-}
+  }
+
 
 //Contact
 
 #contact {
   @extend .sections;
-  height: 640px;
+  height: 100vh;
   .con-title {
     text-align: center;
     width: 220px;
@@ -316,6 +436,9 @@
         background-color: $primary;
         color: white;
         border: none;
+        &:hover {
+          animation: grow 1s forwards;
+        }
       }
     }
   }
@@ -324,11 +447,16 @@
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
+    @media #{$breakpoint-tablet} {
+      justify-content: flex-end;
+      margin-right: 25px;
+    }
     .soc-box {
       a {
-        margin: 5px;
-        &:hover {
-          animation: bounce 1s forwards;
+        img {
+          &:hover {
+            animation: bounce 1s forwards;
+          }
         }
       }
     }
