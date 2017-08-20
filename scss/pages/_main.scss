@@ -59,12 +59,29 @@
           position: relative;
           left: 91px;
         }
+        @media #{$breakpoint-tablet} {
+          font-size: 90px;
+        }
+        @media #{$breakpoint-laptop} {
+          position: relative;
+          left: 98px;
+        }
+
       }
       .firstname {
         text-align: right;
+        @media #{$breakpoint-tablet} {
+          bottom: 80px;
+          left: 98px;
+        }
+
       }
       .lastname {
         text-align: left;
+        @media #{$breakpoint-tablet} {
+          bottom: 50px;
+          left: -3px;
+        }
       }
       span {
         @media #{$breakpoint-tablet} {
@@ -86,6 +103,10 @@
           position: relative;
           left: 250px;
         }
+        @media #{$breakpoint-laptop} {
+          font-size: 36px;
+          left: 390px;
+        }
       }
     }
   }
@@ -93,16 +114,30 @@
 
 //Process
 #process {
-  height: 100vh;
   @extend .sections;
+  @media #{$breakpoint-tablet} {
+    height: 700px;
+  }
+  @media #{$breakpoint-laptop} {
+    height: 750px;
+  }
   .pro-title {
     text-align: center;
     width: 220px;
+    @media #{$breakpoint-tablet} {
+      margin-top: 20px;
+    }
     h1 {
       @extend .section-headers;
       height: 50px;
       span {
         color: white;
+      }
+      @media #{$breakpoint-laptop} {
+        font-size: 90px;
+        border-bottom: 4px solid black;
+        height: 90px;
+        width: 350px;
       }
     }
   }
@@ -115,11 +150,24 @@
     top: 20px;
     left: 100px;
     animation: movefwd 15s infinite;
+    @media #{$breakpoint-tablet} {
+      margin-top: 20px;
+    }
+    @media #{$breakpoint-laptop} {
+      height: 110px;
+      left: 150px;
+      width: 200px;
+    }
   }
   .process-secs {
     @media #{$breakpoint-tablet} {
       display: flex;
       justify-content: space-around;
+      margin-top: 20px;
+    }
+    @media #{$breakpoint-laptop} {
+      width: 1000px;
+      align-self: center;
     }
     .process-first-row {
       margin-top: 30px;
@@ -191,16 +239,63 @@
 
 //Work
 #work {
-  height: 700px;
+  height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
+  .color-block {
+    @media #{$breakpoint-tablet} {
+      background-color: $secondary2;
+      height: 55px;
+      width: 102px;
+      z-index: -1;
+      position: absolute;
+      top: -22px;
+      right: 60px;
+      animation: movefwd 15s infinite;
+    }
+    @media #{$breakpoint-laptop} {
+      height: 110px;
+      width: 182px;
+      right: 80px;
+    }
+  }
+  .work-title-large {
+    display: none;
+    @media #{$breakpoint-tablet} {
+      display: block;
+      position: absolute;
+      top: -22px;
+      right: 46px;
+      h1 {
+        height: 50px;
+        font-family: Questrial;
+        margin: 0;
+        color: black;
+        font-size: 48px;
+        border-bottom: 2px solid black;
+        @media #{$breakpoint-laptop} {
+          font-size: 90px;
+          border-bottom: 4px solid black;
+          height: 90px;
+          width:230px;
+        }
+      }
+    }
+  }
   .work-color {
-    height: 600px;
+    height: 100vh;
     background-color: $secondary2;
+    width: 100%;
+    display: flex;
     @extend .sections;
     justify-content: space-between;
     @media #{$breakpoint-tablet} {
-      width: 550px;
+      width: 60%;
+      height: 550px;
+    }
+    @media #{$breakpoint-laptop} {
+      width: 45%;
     }
     .work-title {
       margin-right: 20px;
@@ -215,18 +310,9 @@
           position: relative;
           left: 200px;
           bottom: 100px;
+          display: none;
         }
       }
-    }
-    .color-block {
-      background-color: $secondary2;
-      height: 55px;
-      width: 92px;
-      z-index: -1;
-      position: relative;
-      left: 610px;
-      bottom: 195px;
-      animation: movefwd 15s infinite;
     }
     .title-pos {
       position: absolute;
@@ -236,11 +322,13 @@
       @media #{$breakpoint-tablet} {
         transform: rotateZ(0deg) translateY(0px);
         left: 240px;
-        top: 100px;
+        top: 40px;
       }
       .proj-title {
         animation: flip 3s forwards .2s;
-
+        @media #{$breakpoint-tablet} {
+          animation: fadeIn 4s forwards;
+        }
         h5 {
           text-align: right;
           font-family: Raleway;
@@ -254,16 +342,19 @@
             line-height: 15px;
             text-align: left;
           }
+          @media #{$breakpoint-laptop} {
+            font-size: 36px;
+            margin-right: 0;
+            line-height: 25px;
+          }
         }
         .line {
           width: 200px;
           height: 2px;
           background-color: black;
-          @media #{$breakpoint-tablet} {
-            position: absolute;
-            right: 0;
-            top: 20px;
-
+          @media #{$breakpoint-laptop} {
+            width: 400px;
+            height: 4px;
           }
         }
       }
@@ -276,40 +367,50 @@
 
     .proj-img {
       align-self: flex-end;
-      margin-top: 60px;
-      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      width: 370px;
+      height: 200px;
       @media #{$breakpoint-tablet} {
-        left: 150px;
-        margin-top: 0;
-        bottom: 40px;
+        position: absolute;
+        right: -240px;
+        top: 170px;
+        width: 470px;
+        height: 230px;
+      }
+      @media #{$breakpoint-laptop} {
+        width: 600px;
+        height: 290px;
+        top: 160px;
       }
       img {
         width: 370px;
-        height: auto;
+        height: 200px;
         box-shadow: 4px 4px 10px black;
         animation: imgslide 1.5s forwards;
         @media #{$breakpoint-tablet} {
           width: 470px;
+          height: 230px;
+        }
+        @media #{$breakpoint-laptop} {
+          width: 600px;
+          height: 290px;
         }
       }
-      a {
-        height: 370px;
-        width: auto;
-        vertical-align: middle;
+      &:hover:after {
+        content: "To Project Github";
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Raleway;
+        font-size: 32px;
+        color: white;
       }
-      // &:hover:after {
-      //   content: "To Project Github";
-      //   background-color: rgba(255, 255, 255, 0.4);
-      //   height: 98%;
-      //   width: 100%;
-      //   position: absolute;
-      //   top: 0;
-      //   display: flex;
-      //   justify-content: center;
-      //   align-items: center;
-      //   font-family: Raleway;
-      //   font-size: 22px;
-      // }
     }
     .proj-img-2 {
       @extend .proj-img;
@@ -332,6 +433,9 @@
     .proj-desc-2 {
       @extend .proj-desc;
       display: none;
+      @media #{$breakpoint-tablet} {
+        top: 120px;
+      }
     }
 
     .arrow-bar {
@@ -363,6 +467,12 @@
     h1 {
       @extend .section-headers;
       height: 50px;
+      @media #{$breakpoint-laptop} {
+        font-size: 90px;
+        border-bottom: 4px solid black;
+        height: 90px;
+        width: 350px;
+      }
       span {
         color: white;
       }
@@ -377,16 +487,28 @@
     top: 20px;
     left: 55px;
     animation: movebwd 15s infinite;
+    @media #{$breakpoint-laptop} {
+      height: 110px;
+      width: 190px;
+      left: 65px;
+    }
   }
   .lets-work {
     position: absolute;
     top: 35px;
-    left: 160px;
+    left: 100px;
+    @media #{$breakpoint-laptop} {
+      top: 55px;
+      left: 255px;
+    }
     h5 {
       text-align: right;
       font-family: Raleway;
       font-style: italic;
       font-size: 22px;
+      @media #{$breakpoint-laptop} {
+        font-size: 36px;
+      }
     }
   }
   form {
@@ -397,25 +519,47 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media #{$breakpoint-laptop} {
+      height: 306px;
+      width: 385px;
+    }
     .row-1, .row-2, .row-3{
       width: 290px;
       display: flex;
+      @media #{$breakpoint-laptop} {
+        width: 385px;
+      }
     }
     input {
       border: 1px solid black;
       width: 110px;
+      @media #{$breakpoint-laptop} {
+        width: 166px;
+        height: 31px;
+        margin-bottom: 5px;
+      }
     }
     input::placeholder {
       font-family: Raleway;
-      color: black;
+      color: gray;
+      @media #{$breakpoint-laptop} {
+        font-size: 16px;
+      }
     }
     textarea {
       border: 1px solid black;
       width: 100%;
+      @media #{$breakpoint-laptop} {
+        height: 112px;
+        width: 385px;
+      }
     }
     textarea::placeholder {
       font-family: Raleway;
-      color: black;
+      color: gray;
+      @media #{$breakpoint-laptop} {
+        font-size: 16px;
+      }
     }
     label {
       text-align: left;
@@ -423,9 +567,15 @@
       font-style: italic;
       font-size: 22px;
       width: 125px;
+      @media #{$breakpoint-laptop} {
+        font-size: 26px;
+      }
     }
     .row-3 {
       justify-content: flex-end;
+      @media #{$breakpoint-laptop} {
+        justify-content: center;
+      }
       button {
         width: 80px;
         height: 40px;
@@ -436,6 +586,9 @@
         background-color: $primary;
         color: white;
         border: none;
+        @media #{$breakpoint-laptop} {
+          margin: 0;
+        }
         &:hover {
           animation: grow 1s forwards;
         }
@@ -449,6 +602,9 @@
     margin-bottom: 25px;
     @media #{$breakpoint-tablet} {
       justify-content: flex-end;
+      position: absolute;
+      bottom: 0;
+      right: 0;
       margin-right: 25px;
     }
     .soc-box {
