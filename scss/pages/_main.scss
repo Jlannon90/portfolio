@@ -1,3 +1,8 @@
+//Site Max Width
+body {
+  max-width: 1440px;
+}
+
 //Navigation
 .navbar {
   position: fixed;
@@ -250,7 +255,7 @@
       width: 102px;
       z-index: -1;
       position: absolute;
-      top: -22px;
+      top: 10px;
       right: 60px;
       animation: movefwd 15s infinite;
     }
@@ -265,7 +270,7 @@
     @media #{$breakpoint-tablet} {
       display: block;
       position: absolute;
-      top: -22px;
+      top: 10px;
       right: 46px;
       h1 {
         height: 50px;
