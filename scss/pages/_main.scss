@@ -1,6 +1,11 @@
 //Site Max Width
 body {
   max-width: 1440px;
+  @media #{$breakpoint-laptop-plus} {
+    margin: 0 auto;
+    border: 2px solid black;
+    box-shadow: 20px 20px 10px grey;
+  }
 }
 
 //Navigation
@@ -37,10 +42,10 @@ body {
 
 // Landing Page
 #landing-page {
-  height: 100vh;
+  height: 750px;
   .landing-color {
     background-color: $primary;
-    height: 100vh;
+    height: 750px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -75,6 +80,7 @@ body {
       }
       .firstname {
         text-align: right;
+        animation: fadeIn 4s forwards;
         @media #{$breakpoint-tablet} {
           bottom: 80px;
           left: 98px;
@@ -83,6 +89,7 @@ body {
       }
       .lastname {
         text-align: left;
+        animation: fadeIn 8s forwards;
         @media #{$breakpoint-tablet} {
           bottom: 50px;
           left: -3px;
@@ -100,6 +107,7 @@ body {
       margin-right: 10px;
       margin-top: 10px;
       h4 {
+        animation: fadeIn 12s forwards;
         font-family: Raleway;
         margin: 0;
         margin-top: 3px;
@@ -244,7 +252,7 @@ body {
 
 //Work
 #work {
-  height: 100vh;
+  height: 650px;
   display: flex;
   align-items: center;
   position: relative;
@@ -289,7 +297,7 @@ body {
     }
   }
   .work-color {
-    height: 100vh;
+    height: 650px;
     background-color: $secondary2;
     width: 100%;
     display: flex;
@@ -300,7 +308,7 @@ body {
       height: 550px;
     }
     @media #{$breakpoint-laptop} {
-      width: 45%;
+      width: 48%;
     }
     .work-title {
       margin-right: 20px;
@@ -366,7 +374,22 @@ body {
       .proj-title-2 {
         @extend .proj-title;
         display: none;
-
+      }
+      .proj-title-3 {
+        @extend .proj-title;
+        display: none;
+      }
+      .proj-title-4 {
+        @extend .proj-title;
+        display: none;
+      }
+      .proj-title-5 {
+        @extend .proj-title;
+        display: none;
+      }
+      .proj-title-6 {
+        @extend .proj-title;
+        display: none;
       }
     }
 
@@ -374,9 +397,12 @@ body {
       align-self: flex-end;
       display: flex;
       justify-content: flex-end;
-      width: 370px;
-      height: 200px;
+      width: 320px;
+      height: 160px;
+      margin: 0 auto;
+      margin-top: 120px;
       @media #{$breakpoint-tablet} {
+        margin-top: 0;
         position: absolute;
         right: -240px;
         top: 170px;
@@ -384,13 +410,14 @@ body {
         height: 230px;
       }
       @media #{$breakpoint-laptop} {
+        margin-top: 0;
         width: 600px;
         height: 290px;
         top: 160px;
       }
       img {
-        width: 370px;
-        height: 200px;
+        width: 320px;
+        height: 160px;
         box-shadow: 4px 4px 10px black;
         animation: imgslide 1.5s forwards;
         @media #{$breakpoint-tablet} {
@@ -421,6 +448,22 @@ body {
       @extend .proj-img;
       display: none;
     }
+    .proj-img-3 {
+      @extend .proj-img;
+      display: none;
+    }
+    .proj-img-4 {
+      @extend .proj-img;
+      display: none;
+    }
+    .proj-img-5 {
+      @extend .proj-img;
+      display: none;
+    }
+    .proj-img-6 {
+      @extend .proj-img;
+      display: none;
+    }
 
     .proj-desc {
       @extend .paragraphs;
@@ -439,7 +482,50 @@ body {
       @extend .proj-desc;
       display: none;
       @media #{$breakpoint-tablet} {
+        top: 100px;
+      }
+      @media #{$breakpoint-laptop} {
         top: 120px;
+      }
+    }
+    .proj-desc-3 {
+      @extend .proj-desc;
+      display: none;
+      @media #{$breakpoint-tablet} {
+        top: 120px;
+      }
+      @media #{$breakpoint-laptop} {
+        top: 140px;
+      }
+    }
+    .proj-desc-4 {
+      @extend .proj-desc;
+      display: none;
+      @media #{$breakpoint-tablet} {
+        top: 150px;
+      }
+      @media #{$breakpoint-laptop} {
+        top: 180px;
+      }
+    }
+    .proj-desc-5 {
+      @extend .proj-desc;
+      display: none;
+      @media #{$breakpoint-tablet} {
+        top: 150px;
+      }
+      @media #{$breakpoint-laptop} {
+        top: 170px;
+      }
+    }
+    .proj-desc-6 {
+      @extend .proj-desc;
+      display: none;
+      @media #{$breakpoint-tablet} {
+        top: 150px;
+      }
+      @media #{$breakpoint-laptop} {
+        top: 170px;
       }
     }
 
@@ -452,7 +538,7 @@ body {
           animation: squish 1s forwards;
         }
       }
-      .left-arrow-2, .right-arrow-2 {
+      .left-arrow-2, .right-arrow-2, .left-arrow-3, .right-arrow-3, .left-arrow-4, .right-arrow-4, .left-arrow-5, .right-arrow-5, .left-arrow-6, .right-arrow-6 {
         @extend .left-arrow;
         display: none;
       }
@@ -465,7 +551,10 @@ body {
 
 #contact {
   @extend .sections;
-  height: 100vh;
+  height: 650px;
+  @media #{$breakpoint-laptop} {
+    height: 750px;
+  }
   .con-title {
     text-align: center;
     width: 220px;
@@ -529,7 +618,7 @@ body {
       width: 385px;
     }
     .row-1, .row-2, .row-3{
-      width: 290px;
+      width: 280px;
       display: flex;
       @media #{$breakpoint-laptop} {
         width: 385px;
@@ -611,6 +700,9 @@ body {
       bottom: 0;
       right: 0;
       margin-right: 25px;
+    }
+    @media #{$breakpoint-tablet} {
+      margin-bottom: 45px;
     }
     .soc-box {
       a {
