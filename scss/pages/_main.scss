@@ -12,6 +12,7 @@ body {
 .navbar {
   position: fixed;
   width: 100%;
+  max-width: 1440px;
   height: 25px;
   z-index: 1;
 }
@@ -19,7 +20,7 @@ body {
 .menu {
   display: none;
   position: absolute;
-  top: 8px;
+  top: 9px;
   left: 20px;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;
@@ -32,7 +33,10 @@ body {
     text-decoration: none;
     color: black;
     font-family: Raleway;
-    font-size: 22px;
+    font-size: 17px;
+    @media #{$breakpoint-tablet} {
+      font-size: 22px;
+    }
     margin-left: 5px;
     &:hover {
       text-decoration: underline;
@@ -252,7 +256,7 @@ body {
 
 //Work
 #work {
-  height: 650px;
+  height: 550px;
   display: flex;
   align-items: center;
   position: relative;
@@ -297,7 +301,7 @@ body {
     }
   }
   .work-color {
-    height: 650px;
+    height: 550px;
     background-color: $secondary2;
     width: 100%;
     display: flex;
@@ -338,7 +342,7 @@ body {
         top: 40px;
       }
       .proj-title {
-        animation: flip 3s forwards .2s;
+        animation: flip 1s forwards;
         @media #{$breakpoint-tablet} {
           animation: fadeIn 4s forwards;
         }
@@ -376,6 +380,15 @@ body {
         display: none;
       }
       .proj-title-3 {
+        h5 {
+          font-size: 18px;
+          @media #{$breakpoint-tablet} {
+            font-size: 22px;
+          }
+          @media #{$breakpoint-laptop} {
+            font-size: 36px;
+          }
+        }
         @extend .proj-title;
         display: none;
       }
@@ -400,7 +413,7 @@ body {
       width: 320px;
       height: 160px;
       margin: 0 auto;
-      margin-top: 120px;
+      margin-top: 40px;
       @media #{$breakpoint-tablet} {
         margin-top: 0;
         position: absolute;
@@ -419,14 +432,16 @@ body {
         width: 320px;
         height: 160px;
         box-shadow: 4px 4px 10px black;
-        animation: imgslide 1.5s forwards;
+        animation: fadeIn 4s forwards;
         @media #{$breakpoint-tablet} {
           width: 470px;
           height: 230px;
+          animation: imgslide 1.5s forwards;
         }
         @media #{$breakpoint-laptop} {
           width: 600px;
           height: 290px;
+          animation: imgslide 1.5s forwards;
         }
       }
       &:hover:after {
@@ -442,6 +457,7 @@ body {
         font-family: Raleway;
         font-size: 32px;
         color: white;
+        cursor: pointer;
       }
     }
     .proj-img-2 {
@@ -469,7 +485,7 @@ body {
       @extend .paragraphs;
       width: 305px;
       align-self: center;
-      margin-top: 20px;
+      // margin-top: 20px;
       animation: fadeIn 4s forwards;
       @media #{$breakpoint-tablet} {
         position: absolute;
@@ -536,6 +552,7 @@ body {
         margin: 10px 20px;
         &:hover {
           animation: squish 1s forwards;
+          cursor: pointer;
         }
       }
       .left-arrow-2, .right-arrow-2, .left-arrow-3, .right-arrow-3, .left-arrow-4, .right-arrow-4, .left-arrow-5, .right-arrow-5, .left-arrow-6, .right-arrow-6 {
@@ -685,6 +702,7 @@ body {
         }
         &:hover {
           animation: grow 1s forwards;
+          cursor: pointer;
         }
       }
     }
