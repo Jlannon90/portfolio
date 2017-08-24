@@ -3,8 +3,8 @@ body {
   max-width: 1440px;
   @media #{$breakpoint-laptop-plus} {
     margin: 0 auto;
-    border: 2px solid black;
-    box-shadow: 20px 20px 10px grey;
+    border: 1px solid black;
+    box-shadow: 15px 15px 10px grey;
   }
 }
 
@@ -46,16 +46,20 @@ body {
 
 // Landing Page
 #landing-page {
-  height: 750px;
+  height: 600px;
+  @media #{$breakpoint-tablet} {
+    height: 750px;
+  }
   .landing-color {
     background-color: $primary;
-    height: 750px;
+    height: 600px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     @media #{$breakpoint-tablet} {
+      height: 750px;
       width: 65%;
       position: relative;
       align-items: flex-end;
@@ -256,7 +260,7 @@ body {
 
 //Work
 #work {
-  height: 550px;
+  height: 650px;
   display: flex;
   align-items: center;
   position: relative;
@@ -301,7 +305,7 @@ body {
     }
   }
   .work-color {
-    height: 550px;
+    height: 650px;
     background-color: $secondary2;
     width: 100%;
     display: flex;
@@ -413,7 +417,7 @@ body {
       width: 320px;
       height: 160px;
       margin: 0 auto;
-      margin-top: 40px;
+      margin-top: 120px;
       @media #{$breakpoint-tablet} {
         margin-top: 0;
         position: absolute;
@@ -469,14 +473,26 @@ body {
       display: none;
     }
     .proj-img-4 {
+      margin-top: 60px;
+      @media #{$breakpoint-tablet} {
+        margin-top: 0;
+      }
       @extend .proj-img;
       display: none;
     }
     .proj-img-5 {
+      margin-top: 60px;
+      @media #{$breakpoint-tablet} {
+        margin-top: 0;
+      }
       @extend .proj-img;
       display: none;
     }
     .proj-img-6 {
+      margin-top: 10px;
+      @media #{$breakpoint-tablet} {
+        margin-top: 0;
+      }
       @extend .proj-img;
       display: none;
     }
